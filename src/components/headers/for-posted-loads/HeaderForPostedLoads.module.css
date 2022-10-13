@@ -1,0 +1,22 @@
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: 1fr;
+    gap:4px;
+    padding: 5px;
+    background: #ededed;
+    border-radius: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    user-select: none;
+}
+.orig {
+    grid-column: 4 / 6;
+    width: max-content;
+}
+
+.dest {
+    grid-column: 7 / 9;
+    width: max-content;
+}
