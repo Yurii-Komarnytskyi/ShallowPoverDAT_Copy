@@ -1,6 +1,6 @@
 import React from 'react';
 import { IshippingLoadInfo } from '../../ts/interfaces';
-import styles from './PostedLoadBar.module.css';
+import styles from './PostedLoadBar.module.scss';
 
 
 const PostedLoadBar: React.FC<IshippingLoadInfo> = ({
@@ -22,14 +22,14 @@ const PostedLoadBar: React.FC<IshippingLoadInfo> = ({
 }) => {
   return (
     <div className={styles.container}>
-      <div>{pickUpDate}</div>
-      <div>{deliveryDate}</div>
+      <div className={styles.pu}>{pickUpDate}</div>
+      <div className={styles.dropOff}>{deliveryDate}</div>
       <div className={styles.orig}>{origin}</div>
       <div className={styles.dest}>{destination}</div>
-      <div>{equipment}</div>
-      <div>{fp}</div>
-      <div>{truckLength} ft</div>
-      <div>{loadWeight} lbs</div>
+      <div className={styles.equipment}>{equipment}</div>
+      <div className={styles.fp}>{fp}</div>
+      <div className={styles.len}>{truckLength} ft</div>
+      <div className={styles.weight}>{loadWeight} lbs</div>
       <div className={styles.price}>${offerRate}</div>
     </div>
   )
