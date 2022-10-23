@@ -1,0 +1,67 @@
+@mixin loadHeadersLayout($bckGrdColor) {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr); 
+    grid-template-areas: 
+        "pu drop or or or dest dest dest eq fp len wei rate";
+    gap:4px; 
+    padding: 5px;
+    background: $bckGrdColor;
+    font-size: 15px;
+    user-select: none;
+    .pu {
+        grid-area: pu;
+    }
+    .dropOff {
+        grid-area: drop;
+    
+    }
+    .orig {
+        grid-area: or;
+        width: max-content;
+    }
+    .dest {
+        grid-area: dest;
+        width: max-content;
+    }
+    .equipment {
+        grid-area: eq;
+    }
+    .fp {
+        grid-area: fp;
+    }
+    .len {
+        grid-area: len;
+    }
+    .weight {
+        grid-area: wei;
+    }
+    .rate {
+        grid-area: rate;
+    
+    }
+}
+
+@mixin basicInputs {
+    input:focus, textarea:focus {
+        outline: none;
+    }
+    input {
+        width: 60%;
+        user-select: none;
+    }
+    input[type='date'] {
+        width: 80%;
+    }
+    select{
+        width: 60%;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+}
