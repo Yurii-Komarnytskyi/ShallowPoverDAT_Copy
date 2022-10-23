@@ -1,0 +1,64 @@
+@import '../../../scss/mixins/load-headers-layout';
+*{
+    @include basicInputs;
+}
+.wrapper {
+    @include loadHeadersLayout(#555555);
+}
+.testCont {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: auto \ 1fr;
+    grid-template-areas: 
+        "refN refN .  agInf agInf agInf . . . opt hei pall pc"
+        "txtA txtA txtA . . . . . . . . . sv"
+        ;
+    gap:4px; 
+    padding: 5px;
+    background-color: #555555;
+    .refN {
+        grid-area: refN;
+    }
+    .agInf {
+        grid-area: agInf;
+        font-weight: 400;
+    }
+    .v {
+        grid-area: v;
+    }
+    .opt {
+        grid-area: opt;
+    }
+    .hei {
+        grid-area: hei;
+    }
+    .pall {
+        grid-area: pall;
+    }
+    .pc {
+        grid-area: pc;
+    }
+    .v {
+        grid-area: v;
+    }
+    .txtA {
+        grid-area: txtA;
+        resize: none;
+        background-color: #ffffff;
+        font-size: 1em;
+    }
+
+    .saveBttn {
+        grid-area: sv;
+        height: max-content;   
+        width: max-content;
+        align-self: end;
+        justify-self: start;
+        border: none;
+        padding: 5px;
+        background: #22d0ff;
+        color: #ffffff;
+        font-weight: 600;
+    }
+}
+
